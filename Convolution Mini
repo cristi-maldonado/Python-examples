@@ -1,0 +1,18 @@
+ 
+ 
+ #http://www.songho.ca/dsp/convolution/convolution2d_example.html 
+ #convolve 2D list of list example 
+ #iterating backwards in one matrix while iterating forward in another 
+ 
+ 
+ convolved_pixels = []
+  for p_row, k_row in zip(pixels, reversed(kernel)):
+    mult_k_p = []
+    for p_element, k_rev_element in zip(p_row, reversed(k_row)):
+        mult_k_p.append(p_element*k_rev_element)
+    convolved_pixels.append(mult_k_p)
+        
+  result_val = 0     
+  for row in convolved_pixels:
+    for element in row:
+      result_val += element
