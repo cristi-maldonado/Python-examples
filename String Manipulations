@@ -1,0 +1,93 @@
+# Reversing a string using slicing
+
+my_string = "ABCDE"
+reversed_string = my_string[::-1]
+
+print(reversed_string)
+
+# Output
+# EDCBA
+
+#-----------------------------------------
+my_string = "my name is chaitanya baweja"
+
+# using the title() function of string class
+new_string = my_string.title()
+
+print(new_string)
+
+# Output
+# My Name Is Chaitanya Baweja
+#-----------------------------------------
+
+my_string = "aavvccccddddeee"
+
+# converting the string to a set
+temp_set = set(my_string)
+
+# stitching set into a string using join
+new_string = ''.join(temp_set)
+
+print(new_string)
+#-----------------------------------------
+
+n = 3 # number of repetitions
+
+my_string = "abcd"
+my_list = [1,2,3]
+
+print(my_string*n)
+# abcdabcdabcd
+
+print(my_list*n)
+# [1,2,3,1,2,3,1,2,3]
+#-----------------------------------------
+
+string_1 = "My name is Chaitanya Baweja"
+string_2 = "sample/ string 2"
+
+# default separator ' '
+print(string_1.split())
+# ['My', 'name', 'is', 'Chaitanya', 'Baweja']
+
+# defining separator as '/'
+print(string_2.split('/'))
+# ['sample', ' string 2']
+#-----------------------------------------
+
+list_of_strings = ['My', 'name', 'is', 'Chaitanya', 'Baweja']
+
+# Using join with the comma separator
+print(','.join(list_of_strings))
+
+# Output
+# My,name,is,Chaitanya,Baweja
+#-----------------------------------------
+
+my_string = "abcba"
+
+if my_string == my_string[::-1]:
+    print("palindrome")
+else:
+    print("not palindrome")
+
+# Output
+# palindrome
+#-----------------------------------------
+
+
+from collections import Counter
+
+str_1, str_2, str_3 = "acbde", "abced", "abcda"
+cnt_1, cnt_2, cnt_3  = Counter(str_1), Counter(str_2), Counter(str_3)
+
+if cnt_1 == cnt_2:
+    print('1 and 2 anagram')
+if cnt_1 == cnt_3:
+    print('1 and 3 anagram')
+    
+#-----------------------------------------
+
+
+    
+  #https://medium.com/better-programming/20-python-snippets-you-should-learn-today-8328e26ff124   
